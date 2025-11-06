@@ -1,4 +1,4 @@
-package components;
+package BMI.components;
 
 import java.sql.*;
 
