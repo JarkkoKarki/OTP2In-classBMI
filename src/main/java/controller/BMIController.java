@@ -95,8 +95,4 @@ public class BMIController {
         submit.setText(bundle.getString("btnCalculate.text"));
         totaltxt.setText(bundle.getString("lblResult.text"));
     }
-
-    public static void main(String[] args) {
-        view.BMI.launch(view.BMI.class);
-    }
 }
