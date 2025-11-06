@@ -1,5 +1,6 @@
 package controller;
 
+import components.BMIResultService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -62,6 +63,8 @@ public class BMIController {
             String bmiFormatted = String.format(Locale.US, "%.1f", bmi);
 
             totaltxt.setText("Your BMI is: " + bmiFormatted);
+            String language = Locale.getDefault().getLanguage();
+            BMIResultService.saveResult(weight, height * 100, bmi, language);
 
         } catch (NumberFormatException e) {
             totaltxt.setText(bundle.getString("lblInvalid.text"));
